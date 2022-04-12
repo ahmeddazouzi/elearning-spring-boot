@@ -1,12 +1,12 @@
 package com.enicarthage.elearningbackend.model;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "student")
 public class student {
-
+     @Id
+     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id ;
     private String firstname ;
     private String lastname ;
@@ -16,7 +16,7 @@ public class student {
     public student() {
     }
 
-    public student(String firstname ,String lastname,String email,String password ) {
+    public student(String firstname ,String lastname, String email, String password ) {
         super();
         this.firstname = firstname;
         this.lastname=lastname;
