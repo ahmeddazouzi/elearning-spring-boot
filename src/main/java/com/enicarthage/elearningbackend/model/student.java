@@ -1,5 +1,10 @@
 package com.enicarthage.elearningbackend.model;
 
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "student")
 public class student {
 
     private long id ;
