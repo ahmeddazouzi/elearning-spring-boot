@@ -1,9 +1,9 @@
 package com.enicarthage.elearningbackend.model;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
+@Entity
+@Table(name = "eventStudent")
 public class eventStudent {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
