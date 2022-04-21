@@ -9,7 +9,7 @@ import java.util.Date;
 public class Event {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id ;
+    private Long id ;
     private String name ;
     private Date date ;
     private String descriptionEvent ;
@@ -25,11 +25,17 @@ public Event (){}
         this.name = name;
     }
 
-    public long getId() {
+    public String getName() {
+        return name;
+    }
+
+
+
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

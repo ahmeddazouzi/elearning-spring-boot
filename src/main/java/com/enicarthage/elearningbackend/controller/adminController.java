@@ -14,10 +14,12 @@ public class adminController {
     private adminRepository repo ;
      @PostMapping("/adminLogIn")
      public ResponseEntity<?> login(@RequestBody Admin adminData){
-         
+
    Admin admin =repo.findByemail(adminData.getEmail());
    if (admin.getPassword().equals(adminData.getPassword()))
                  return ResponseEntity.ok(admin);
          return (ResponseEntity<?>) ResponseEntity.internalServerError();
      }
+
+
 }
