@@ -1,4 +1,4 @@
-package com.enicarthage.elearningbackend.model;
+package com.enicarthage.elearningbackend.entity;
 
 import javax.persistence.*;
 

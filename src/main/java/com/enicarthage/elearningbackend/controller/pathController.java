@@ -1,11 +1,11 @@
 package com.enicarthage.elearningbackend.controller;
 
-import com.enicarthage.elearningbackend.model.Path;
+import com.enicarthage.elearningbackend.entity.Path;
 
-import com.enicarthage.elearningbackend.model.course;
-import com.enicarthage.elearningbackend.repository.pathRepository;
+import com.enicarthage.elearningbackend.dao.pathRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.HashMap;
@@ -46,6 +46,7 @@ public class pathController {
 
 
     //    Edit Path rest api
+    @PreAuthorize("hasRole('Admin')")
     @PutMapping("/updatePath/{id}")
     public ResponseEntity<Path> updatePath(@PathVariable Long id, @RequestBody Path pathDetails ){
 

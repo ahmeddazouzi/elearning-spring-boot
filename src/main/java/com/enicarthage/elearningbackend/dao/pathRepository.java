@@ -1,6 +1,6 @@
-package com.enicarthage.elearningbackend.repository;
+package com.enicarthage.elearningbackend.dao;
 
-import com.enicarthage.elearningbackend.model.Path;
+import com.enicarthage.elearningbackend.entity.Path;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

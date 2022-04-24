@@ -1,9 +1,7 @@
 package com.enicarthage.elearningbackend.controller;
 
-import com.enicarthage.elearningbackend.model.Event;
-import com.enicarthage.elearningbackend.model.course;
-import com.enicarthage.elearningbackend.repository.EventRepository;
-import com.enicarthage.elearningbackend.repository.courseRepository;
+import com.enicarthage.elearningbackend.entity.Event;
+import com.enicarthage.elearningbackend.dao.EventRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

@@ -1,6 +1,4 @@
-package com.enicarthage.elearningbackend.model;
-
-import org.springframework.scheduling.config.ScheduledTaskRegistrar;
+package com.enicarthage.elearningbackend.entity;
 
 import javax.persistence.*;
 import java.util.Date;

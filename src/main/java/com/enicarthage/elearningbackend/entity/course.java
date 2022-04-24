@@ -1,7 +1,5 @@
-package com.enicarthage.elearningbackend.model;
+package com.enicarthage.elearningbackend.entity;
 
-
-import org.springframework.lang.Nullable;
 
 import javax.persistence.*;
 

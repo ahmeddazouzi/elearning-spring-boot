@@ -1,11 +1,12 @@
 package com.enicarthage.elearningbackend.controller;
 
-import com.enicarthage.elearningbackend.model.course;
-import com.enicarthage.elearningbackend.repository.courseRepository;
+import com.enicarthage.elearningbackend.entity.course;
+import com.enicarthage.elearningbackend.dao.courseRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.HashMap;
@@ -27,6 +28,7 @@ public class courseController {
     }
     // Create course rest api
     @PostMapping("/createCourse")
+    @PreAuthorize("hasRole('User')")
     public course CreateCourse(@RequestBody course course){
         return courseReposotiry.save(course);
     }
